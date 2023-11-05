@@ -51,8 +51,12 @@ header {
 }
 
 .logo.img img {
-    height: 53px; /* Adjust the height as needed */
-    width: 131px; /* Adjust the width as needed */
+    display: block;
+    max-width:131px;
+    max-height:53px;
+    width: auto;
+    height: auto;
+    /* Adjust the width as needed */
     margin-right: 1rem; /* Add margin to separate the logo from the text */
 }
 
