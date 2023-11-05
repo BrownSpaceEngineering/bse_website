@@ -71,8 +71,11 @@ main {
     height: 100%; /* Center the main content vertically on the screen */
 }
 img{
-    height: 70%;
-    width: 80%;
+    display: block;
+    max-width:80%;
+    max-height:80%;
+    width: auto;
+    height: auto;
 }
 
 p {
