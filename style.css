@@ -1,16 +1,15 @@
 * {
-     margin: 0;
-     padding: 0;
-     box-sizing: border-box;
-     font-family: "Gill Sans", sans-serif;
-     font-stretch: condensed;
-
- }
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Gill Sans", sans-serif;
+    font-stretch: condensed;
+}
 
 body {
     height: 100vh;
     background-color: #081120;
-    margin: 0; /* Remove default body margin */
+    margin: 0;
 }
 
 li {
@@ -30,7 +29,6 @@ a:hover {
 header {
     position: relative;
     padding: 0 2rem;
-
 }
 
 .navbar {
@@ -41,30 +39,26 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
 }
 
-.navbar .links{
-    display:flex;
+.navbar .links {
+    display: flex;
     gap: 2rem;
-
 }
 
 .logo.img img {
     display: block;
-    max-width:131px;
-    max-height:53px;
+    max-width: 131px;
+    max-height: 53px;
     width: auto;
     height: auto;
-    /* Adjust the width as needed */
-    margin-right: 1rem; /* Add margin to separate the logo from the text */
+    margin-right: 1rem;
 }
 
 .logo-text {
-    color: #fff; /* Set the text color to white */
-    font-size: 28px; /* Adjust the font size as needed */
+    color: #fff;
+    font-size: 28px;
 }
-
 
 main {
     text-align: center;
@@ -72,17 +66,38 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100%; /* Center the main content vertically on the screen */
+    height: 100vh;
+    background-color: #081120;
+    padding: 20px;
 }
-img{
-    display: block;
-    max-width:80%;
-    max-height:80%;
-    width: auto;
-    height: auto;
+
+.image-container {
+    max-width: 80%;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+
+}
+
+img {
+    max-width: 30%;
+    max-height: 100%;
+}
+
+img:not(.logo img) {
+    margin-right: 20px;
+    margin-top: -10px;
+    border: 3px solid #fff;
+    border-radius: 5px;
+    max-width: 35%; /* Adjust the width as needed */
+    max-height: 100%;
+}
+.image-container img:nth-child(2) {
+    max-width: 40%;
 }
 
 p {
     color: white;
     font-size: 24px;
+    margin-top: 50px;
 }
