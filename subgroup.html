@@ -4,6 +4,26 @@
     <meta charset="UTF-8">
     <title>BSE Website</title>
     <link rel="stylesheet" href ="style2.css"/>
+
+    <script>
+        function myFunction(buttonId, dotsId, moreId) {
+            var dots = document.getElementById(dotsId);
+            var moreText = document.getElementById(moreId);
+            var btnText = document.getElementById(buttonId);
+
+            var dotsDisplayStyle = window.getComputedStyle(dots).getPropertyValue("display");
+
+            if (dotsDisplayStyle === "none" || dotsDisplayStyle === "") {
+                dots.style.display = "inline";
+                btnText.innerHTML = "Read more";
+                moreText.style.display = "none";
+            } else {
+                dots.style.display = "none";
+                btnText.innerHTML = "Read less";
+                moreText.style.display = "inline";
+            }
+        }
+    </script>
 </head>
 <body>
 <header>
@@ -33,9 +53,16 @@
     <div class="gallery-container">
         <div class="responsive">
             <div class="gallery">
-                    <img src="IMG_2726.png" alt="Flight Software">
+                <img src="IMG_2726.png" alt="Flight Software">
                 <div class="desc">Flight Software</div>
-                <div class="desc">Flight Software focuses on coding the software that operates the satellite </div>
+                <div class="desc">
+                    Flight Software (FSW) is tasked with hardware-software integration, merging PVDX’s complex array of sensors and actuators into a central operating system that manages the transfer of information between the satellite and the ground station.
+                    <span id="dots1">...</span>
+                    <span id="more1" style="display: none;">
+                        We are actively developing firmware for a magnetometer, 9-axis motion tracker, radio, OLED display, camera, and random-access-memory using embedded C. To complement this firmware, we are designing a custom data-storage system which handles sensor readings over both I2C and SPI serial communication protocols. Fault-tolerance is core to FSW, and our members are implementing a watchdog system that constantly monitors the health of tasks running within our OS, as well as a cosmic-ray bit-flip simulator that randomly mutates memory to emulate the volatile conditions of low-earth orbit. To further ensure robustness of our design, we are porting a unit-test library over to our embedded architecture. Moving forward, our subgroup will also be incorporating attitude determination and control algorithms into the OS – and creating radiation-safe functions to read/write data to three units of duplicated memory.
+                    </span>
+                    <button onclick="myFunction('myBtn1', 'dots1', 'more1')" id="myBtn1">Read more</button>
+                </div>
             </div>
         </div>
 
@@ -45,24 +72,45 @@
             <div class="gallery">
                     <img src="IMG_2809.png" alt="Ground Software">
                 <div class="desc">Ground Software</div>
-                <div class="desc">Ground Software focuses on the code on the ground </div>
+                <div class="desc">
+                    Ground Software (GSW) is tasked with developing any software not directly running on the satellite, producing a web-app to allow student interaction with PVDX and a mobile application for communicating information about the satellite
+                    <span id="dots2">...</span>
+                    <span id="more2" style="display: none;">
+                    to further BSE’s educational aspirations. They also made this website! Members of GSW learn skills in full-stack development, UI/UX design, and more.
+                    </span>
+                    <button onclick="myFunction('myBtn2', 'dots2', 'more2')" id="myBtn2">Read more</button>
+                </div>
             </div>
         </div>
 
 
         <div class="responsive">
             <div class="gallery">
-                    <img src="IMG_2731.png" alt="Flight Software">
+                    <img src="IMG_2731.png" alt="ADCS">
                 <div class="desc">ADCS</div>
-                <div class="desc">Add a description of the image here</div>
+                <div class="desc">
+                    Attitude Determination & Control Systems (ADCS) is responsible for identifying and maintaining the proper orientation of PVDX as it orbits in space. By collecting data from onboard sensors such as magnetometers and combining them with knowledge of previous states,
+                    <span id="dots3">...</span>
+                    <span id="more3" style="display: none;">
+                    ADCS algorithms are designed to dynamically adjust the orientation of the satellite to point at the ground station in Providence, RI, enabling fast data transmission via the S band antenna. Upon launch, PVDX will have unknown initial velocities. To stabilize the satellite in orbit, we have implemented the B-dot algorithm, which utilizes change in magnetometer readings to reduce angular velocities to near-zero. Once this stage is complete, the satellite will enter 'pointing mode'. ADCS is currently designing the algorithm to determine satellite orientation from magnetometer measurements only.
+                    </span>
+                    <button onclick="myFunction('myBtn3', 'dots3', 'more3')" id="myBtn3">Read more</button>
+                </div>
             </div>
         </div>
 
         <div class="responsive">
             <div class="gallery">
-                    <img src="IMG_2701.png" alt="Flight Software">
+                    <img src="IMG_2701.png" alt="Avionics">
                 <div class="desc">Avionics</div>
-                <div class="desc">Add a description of the image here</div>
+                <div class="desc">
+                    Avionics is responsible for all the electronic hardware aboard the CubeSat. This involves developing all aspects of the satellite's power system, from the solar panels, and batteries, all the way to distribution and sensing.
+                    <span id="dots4">...</span>
+                    <span id="more4" style="display: none;">
+                     A secondary mission of our subgroup is to collect degradation data for the payload, a set of perovskite solar cells manufactured at Brown University
+                    </span>
+                    <button onclick="myFunction('myBtn4', 'dots4', 'more4')" id="myBtn4">Read more</button>
+                </div>
             </div>
         </div>
 
@@ -70,12 +118,32 @@
             <div class="gallery">
                 <img src="IMG_2655.png" alt="Structures">
                 <div class="desc">Structures</div>
-                <div class="desc">Add a description of the image here</div>
+                <div class="desc">
+                    The structures subsystem design, manufacture and test a majority of the components of the physical satellite. There are many independent projects operating within the structures subgroup: chassis, arm mechanism, internal structures, external structures and testing.
+                    <span id="dots5">...</span>
+                    <span id="more5" style="display: none;">
+                    New members are placed in teams with more experienced members to boost their learning experience and ensure that they achieve their goals. Members of Structures will be taught a variety of skills including CAD, FEA, design for manufacturing, spacecraft dynamics and machining & CNC. We’ve just begun our first stage of manufacturing, starting with the main aluminum chassis.
+                    </span>
+                    <button onclick="myFunction('myBtn5', 'dots5', 'more5')" id="myBtn5">Read more</button>
+                </div>
             </div>
         </div>
-        <!-- Add other responsive gallery divs as needed -->
-    </div>
 
+        <div class="responsive">
+            <div class="gallery">
+                <img src="IMG_2655.png" alt="R&D">
+                <div class="desc">R&D</div>
+                <div class="desc">
+                    R&D focuses on unique space related research projects outside the scope of BSEs bigger projects. Last year, R&D competed in the Plant the Moon Challenge, experimenting with cacti growth in lunar highlight and mare simulant, and winning the award for Best Analysis of Data.
+                    <span id="dots6">...</span>
+                    <span id="more6" style="display: none;">
+                        Building on this work, we are now growing algae in a photobioreactor that we hope will help in future experiments to promote plant growth in lunar regolith. We also coordinate BSE’s outreach events. This semester, we are collaborating with Brown Science Prep to educate Providence high schoolers about industry and research in space science.
+                    </span>
+                    <button onclick="myFunction('myBtn6', 'dots6', 'more6')" id="myBtn6">Read more</button>
+            </div>
+        </div>
+    </div>
+    </div>
 </main>
 </body>
 </html>

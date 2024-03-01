@@ -126,8 +126,77 @@ p {
     justify-content: center;
     align-items: center;
 }
-
+/* Update the styles for the .desc class to make buttons block elements */
 .desc {
     margin-top: 10px;
     color: #fff;
+    text-align: center; /* Center the text */
+}
+
+/* Style the buttons */
+.desc button {
+    display: block; /* Make buttons block elements */
+    margin: 10px auto; /* Center buttons and add space around them */
+    background-color: #2F5C88;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.desc button:hover {
+    background-color: #20405C;
+}
+button {
+    background-color: #2F5C88;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #20405C;
+}
+
+
+.contact-container {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #F2F2F2; /* Light gray background color */
+    border-radius: 10px;
+}
+
+.contact-container h2 {
+    color: #2F5C88; /* Dark blue text color */
+}
+
+.contact-container p {
+    color: #333; /* Dark gray text color */
+    font-size: 16px;
+}
+
+.contact-container ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-container li {
+    margin-bottom: 10px;
+}
+
+.contact-container a {
+    color: #2F5C88; /* Dark blue link color */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-container a:hover {
+    color: #1D3D5D; /* Darker blue on hover */
 }
